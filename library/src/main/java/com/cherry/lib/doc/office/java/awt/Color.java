@@ -11,7 +11,7 @@ package com.cherry.lib.doc.office.java.awt;
 /**
  * The <code>Color</code> class is used to encapsulate colors in the default
  * sRGB color space or colors in arbitrary color spaces identified by a
- * {@link ColorSpace}.  Every color has an implicit alpha value of 1.0 or
+ * {@link org.apache.poi.hslf.blip.JPEG.ColorSpace}.  Every color has an implicit alpha value of 1.0 or
  * an explicit one provided in the constructor.  The alpha value
  * defines the transparency of a color and can be represented by
  * a float value in the range 0.0&nbsp;-&nbsp;1.0 or 0&nbsp;-&nbsp;255.
@@ -31,8 +31,8 @@ package com.cherry.lib.doc.office.java.awt;
  * @version 	10 Feb 1997
  * @author 	Sami Shaio
  * @author 	Arthur van Hoff
- * @see		ColorSpace
- * @see         AlphaComposite
+ * @see		JPEG.ColorSpace
+ * @see     AlphaComposite
  */
 public class Color implements java.io.Serializable
 {
@@ -231,7 +231,7 @@ public class Color implements java.io.Serializable
      * default is sRGB.
      * @serial
      * @see #getColor
-     * @see #getColorSpace
+     * @see org.apache.poi.hslf.blip.JPEG.ColorSpace#getColorSpace
      * @see #getColorComponents
      */
     //private ColorSpace cs = null;
@@ -504,17 +504,17 @@ public class Color implements java.io.Serializable
     }
 
     /**
-     * Creates a color in the specified <code>ColorSpace</code>
+     * Creates a color in the specified <code>org.apache.poi.hslf.blip.JPEG.ColorSpace</code>
      * with the color components specified in the <code>float</code>
      * array and the specified alpha.  The number of components is
-     * determined by the type of the <code>ColorSpace</code>.  For 
+     * determined by the type of the <code>org.apache.poi.hslf.blip.JPEG.ColorSpace</code>.  For
      * example, RGB requires 3 components, but CMYK requires 4 
      * components.
-     * @param cspace the <code>ColorSpace</code> to be used to
+     * @param  org.apache.poi.hslf.blip.JPEG.ColorSpace#cspace the <code>org.apache.poi.hslf.blip.JPEG.ColorSpace</code> to be used to
      *			interpret the components
-     * @param components an arbitrary number of color components
-     *                      that is compatible with the <code>ColorSpace</code>
-     * @param alpha alpha value
+     * @param org.apache.poi.hslf.blip.JPEG.ColorSpace#components an arbitrary number of color components
+     *                      that is compatible with the <code>org.apache.poi.hslf.blip.JPEG.ColorSpace</code>
+     * @param org.apache.poi.hslf.blip.JPEG.ColorSpace#alpha alpha value
      * @throws IllegalArgumentException if any of the values in the 
      *         <code>components</code> array or <code>alpha</code> is 
      *         outside of the range 0.0 to 1.0
